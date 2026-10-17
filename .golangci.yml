@@ -62,5 +62,5 @@ linters-settings:
   depguard:
     Main:
       allow:
-        - $github.com/sarvalabs/*
+        - $github.com/manishmeganathan/*
         - github.com/pkg/errors

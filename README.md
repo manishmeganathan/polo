@@ -1,29 +1,29 @@
 ![image](./banner.png)
 
-[godoclink]: https://godoc.org/github.com/sarvalabs/go-polo
-[latestrelease]: https://github.com/sarvalabs/go-polo/releases/latest
-[issueslink]: https://github.com/sarvalabs/go-polo/issues
-[pullslink]: https://github.com/sarvalabs/go-polo/pulls
+[godoclink]: https://godoc.org/github.com/manishmeganathan/polo
+[latestrelease]: https://github.com/manishmeganathan/polo/releases/latest
+[issueslink]: https://github.com/manishmeganathan/polo/issues
+[pullslink]: https://github.com/manishmeganathan/polo/pulls
 
-![go version](https://img.shields.io/github/go-mod/go-version/sarvalabs/go-polo?style=for-the-badge)
+![go version](https://img.shields.io/github/go-mod/go-version/manishmeganathan/polo?style=for-the-badge)
 ![license](https://img.shields.io/badge/license-MIT%2FApache--2.0-informational?style=for-the-badge)
 [![go docs](http://img.shields.io/badge/go-documentation-blue.svg?style=for-the-badge)][godoclink]
-[![latest tag](https://img.shields.io/github/v/tag/sarvalabs/go-polo?color=blue&label=latest%20tag&sort=semver&style=for-the-badge)][latestrelease]
+[![latest tag](https://img.shields.io/github/v/tag/manishmeganathan/polo?color=blue&label=latest%20tag&sort=semver&style=for-the-badge)][latestrelease]
 
-[![issue count](https://img.shields.io/github/issues/sarvalabs/go-polo?style=for-the-badge&color=yellow)][issueslink]
-[![pulls count](https://img.shields.io/github/issues-pr/sarvalabs/go-polo?style=for-the-badge&color=brightgreen)][pullslink]
-![test status](https://img.shields.io/github/actions/workflow/status/sarvalabs/go-polo/ci.yaml?label=tests&style=for-the-badge)
+[![issue count](https://img.shields.io/github/issues/manishmeganathan/polo?style=for-the-badge&color=yellow)][issueslink]
+[![pulls count](https://img.shields.io/github/issues-pr/manishmeganathan/polo?style=for-the-badge&color=brightgreen)][pullslink]
+![test status](https://img.shields.io/github/actions/workflow/status/manishmeganathan/polo/ci.yaml?label=tests&style=for-the-badge)
 
 
-# go-polo
-**go-polo** is a Go implementation of the POLO Encoding and Object Serialization Scheme. [**POLO**](https://github.com/sarvalabs/polo) stands for ***Prefix Ordered Lookup Offsets***. 
+# polo
+**polo** is a Go implementation of the POLO Encoding and Object Serialization Scheme. **POLO** stands for ***Prefix Ordered Lookup Offsets***. 
 
-It is intended for use in projects that prioritize deterministic serialization, minimal wire sizes and serialization safety. POLO follows a very strict specification that is optimized for partial decoding and differential messaging. This implementation is compliant with the [POLO Specification](https://github.com/sarvalabs/polo) that describes both the encoding (wire) format as well as implementation guidelines for several languages.
+It is intended for use in projects that prioritize deterministic serialization, minimal wire sizes and serialization safety. POLO follows a very strict specification that is optimized for partial decoding and differential messaging. This implementation is compliant with the POLO Specification that describes both the encoding (wire) format as well as implementation guidelines for several languages. The specification was published at `github.com/sarvalabs/polo`, which is no longer publicly available.
 
 ## Installation
-Install the latest [release](https://github.com/sarvalabs/go-polo/releases) using the following command
+Install the latest [release](https://github.com/manishmeganathan/polo/releases) using the following command
 ```sh
-go get -u github.com/sarvalabs/go-polo
+go get -u github.com/manishmeganathan/polo
 ```
 
 ## Features
@@ -54,25 +54,47 @@ POLO's partially encoding and field order based indexing (and string based index
 
 ## Examples
 ### Simple Polorization & Depolorization (Encoding/Decoding)
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/polo_test.go#L16-L64
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/polo_test.go#L16-L64
 
 ### Custom Polorization & Depolorization (Encoding/Decoding)
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/polo_test.go#L66-L173
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/polo_test.go#L66-L173
 
 ### Wire Decoding with `Any`
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/polo_test.go#L175-L212
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/polo_test.go#L175-L212
 
 ### `Polorizer` (Encoding Buffer)
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/polorizer_test.go#L12-L42
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/polorizer_test.go#L12-L42
 
 ### `Depolorizer` (Decoding Buffer)
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/depolorizer_test.go#L13-L70
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/depolorizer_test.go#L13-L70
 
 ### Document Encoding
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/document_test.go#L12-L74
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/document_test.go#L12-L74
 
 ### Document Decoding
-https://github.com/sarvalabs/go-polo/blob/22a975e4d1d5329e16aaedd7207aee382e64d30e/document_test.go#L76-L124
+https://github.com/manishmeganathan/polo/blob/db72a9a6ef20e56cb7b9acda692a62ec34eaf6c2/document_test.go#L76-L124
+
+## Legacy
+This repository began as [sarvalabs/go-polo](https://github.com/sarvalabs/go-polo),
+written by Manish Meganathan while at Sarva Labs. It was forked at v0.4.9
+(upstream commit `0f49e51`, 27 November 2024) and republished here.
+
+- All 35 commits and 21 tags were carried over. Their author, committer and tagger
+  email was changed from a former work address to a personal one. Names, messages,
+  dates and content are unchanged, but commit hashes differ from upstream.
+- v0.5.0 is the first release from this repository. It differs from v0.4.9 only in
+  module path, links, copyright and attribution. The code and wire format are
+  identical, known bugs included.
+- Tags v0.1.0 through v0.4.9 are kept for history. They declare the old module path
+  and cannot be installed from `github.com/manishmeganathan/polo`.
+
+The original code is copyright Sarva Labs Inc. & MOI Protocol Developers and is
+used under its Apache-2.0 / MIT license. Changes since the fork are copyright
+Manish Meganathan.
+
+This repository may diverge from the upstream POLO specification, and may be
+renamed, over time. Until stated otherwise, it remains wire-compatible with
+sarvalabs/go-polo v0.4.9.
 
 ## Contributing
 Unless you explicitly state otherwise, any contribution intentionally submitted
@@ -80,7 +102,8 @@ for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 dual licensed as below, without any additional terms or conditions.
 
 ## License
-&copy; 2024 Sarva Labs Inc. & MOI Protocol Developers.
+&copy; 2024 Sarva Labs Inc. & MOI Protocol Developers.<br>
+&copy; 2026 Manish Meganathan.
 
 This project is licensed under either of
 - [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) ([`LICENSE-APACHE`](LICENSE-APACHE))

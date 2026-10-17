@@ -1,4 +1,4 @@
-module github.com/sarvalabs/go-polo
+module github.com/manishmeganathan/polo
 
 go 1.22
 
